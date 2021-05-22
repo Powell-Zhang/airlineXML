@@ -8,11 +8,11 @@ The non-python files are just here for demonstration and are not necessary for a
 ## Usage
 This program allows people to parse airline xml data to get a json seatmap. To run the program, simply put the python file in the same directory as the file you want to parse and run this command, replacing \<fileName\> with the name of the file:
 ```console
-$ python seatnapParse.py <fileName>
+$ python seatmapParse.py <fileName>
 ```
 **Note:** this method will only work with the sample files and their given names. The sample files have vastly different formats, so I wrote separate programs to parse each of them. For a more general usage, you can use this command, replacing \<fileName\> and \<num\> with either 1, if the file is in the same format as the sample file seatmap1.xml, or 2, if the file is in the same format as the sample file seatmap2.xml.  
 ```console
-$ python seatnapParse.py <fileName> <num>
+$ python seatmapParse.py <fileName> <num>
 ```
 ## Result
 This program will produce a file named \<fileName\>\_parsed.json. This contains the JSON data of the seatmap, divided up by row, with the following format.
