@@ -8,19 +8,18 @@ def namespace(element):
     m = re.match(r'\{.*\}', element.tag)
     return m.group(0) if m else ''
 
-#if len(sys.argv) == 1:
-#    print('no input')
-#    exit(0)
-#fileName = sys.argv[1]
-#if not path.exists(fileName):
-#    print('file %s not found', fileName)
-fileName = 'seatmap1.xml'
+if len(sys.argv) == 1:
+    print('no input')
+    exit(0)
+fileName = sys.argv[1]
+if not path.exists(fileName):
+    print('file %s not found', fileName)
 if fileName == 'seatmap1.xml':
     num = 1
 if fileName == 'seatmap2.xml':
     num = 2
-#if len(sys.argv) > 2:
-#   num = sys.argv[2]
+if len(sys.argv) > 2:
+   nums = sys.argv[2]
 
 
 tree = ET.parse(fileName)
@@ -59,7 +58,8 @@ if num == 1:
                                 else:
                                     misc.append(f.text)
                             seats.append({
-                                'Type': tpe,
+                                'Element Type': 'Seat',
+                                'Seat Type': tpe,
                                 'ID': idx,
                                 'Price': price,
                                 'Class': clas,
@@ -103,6 +103,7 @@ elif num == 2:
                     else:
                         misc.append(a)
                 seats.append({
+                    'Element Type': 'Seat',
                     'Type': tpe,
                     'ID': idx,
                     'Price': price,
