@@ -2,7 +2,7 @@
 ## Installation
 to install, simply clone this github repo. This can be done manually, by clicking the green button with the download symbol that says code, or through the command line using the following command:
 ```console
-$ git clone https://github.com/Powell-Zhang/trieCLI
+$ git clone https://github.com/Powell-Zhang/airlineXML
 ```
 The non-python files are just here for demonstration and are not necessary for actual usage. 
 ## Usage
